@@ -27,3 +27,12 @@ pipeline {
     }
   }
 }
+
+
+
+
+Test remain:
+  stage("Build Application") {
+  steps {
+    dir('myapp') { // Replace 'myapp' with your actual subdirectory name
+      sh "mvn clean package"
