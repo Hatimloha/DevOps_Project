@@ -15,8 +15,9 @@ sudo apt install openjdk-17-jre
 sudo apt-get install docker.io
 ```
 
-##
+## Give full write to current user
 ```
+sudo usermod -aG docker $USERsudo usermod -aG docker $USER
 ```
 
 ##
