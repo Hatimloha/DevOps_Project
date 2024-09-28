@@ -1,1 +1,26 @@
+# Create a Ubuntu Ec2/VM
+
+### update the OS 
+```shell
+sudo apt-get update
+sudo apt-get upgrade -y
+```
+### install the java
+```shell
+sudo apt install openjdk-17-jre
+```
+
+## install docker 
+```
+sudo apt-get install docker.io
+```
+
+##
+```
+```
+
+##
+```
+```
+
 
