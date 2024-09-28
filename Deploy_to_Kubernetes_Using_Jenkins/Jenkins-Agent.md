@@ -22,6 +22,8 @@ sudo usermod -aG docker $USER
 ```
 
 ## uncomment require function
+- AuthorizedPrincipalsFile none
+- PubkeyAuthentication yes
 ```
 sudo vi /etc/ssh/sshd_config
 ```
