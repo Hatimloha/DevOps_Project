@@ -36,8 +36,11 @@ sudo systemctl start jenkins
 systemctl status jenkins
 ```
 
-##
+## uncomment require function
+- AuthorizedPrincipalsFile none
+- PubkeyAuthentication yes
 ```
+sudo vi /etc/ssh/sshd_config
 ```
 
 ##
