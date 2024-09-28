@@ -27,5 +27,7 @@ sudo usermod -aG docker $USER
 ```
 sudo vi /etc/ssh/sshd_config
 ```
-
-
+## Reload sshd service
+```bash
+sudo service sshd reload
+```
