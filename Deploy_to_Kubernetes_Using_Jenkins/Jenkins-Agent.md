@@ -31,3 +31,8 @@ sudo vi /etc/ssh/sshd_config
 ```bash
 sudo service sshd reload
 ```
+
+## Generate keys
+```bash
+ssh-keygen -t ed25519
+```
