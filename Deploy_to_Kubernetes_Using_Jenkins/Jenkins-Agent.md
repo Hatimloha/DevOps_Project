@@ -18,10 +18,12 @@ sudo apt-get install docker.io
 ## Give full write to current user
 ```
 sudo usermod -aG docker $USERsudo usermod -aG docker $USER
+sudo usermod -aG docker $USER
 ```
 
-##
+## uncomment require function
 ```
+sudo vi /etc/ssh/sshd_config
 ```
 
 
