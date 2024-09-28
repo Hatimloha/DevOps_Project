@@ -31,8 +31,9 @@ sudo systemctl enable jenkins
 sudo systemctl start jenkins
 ```
 
-##
+## Check servcie is running or not
 ```
+systemctl status jenkins
 ```
 
 ##
