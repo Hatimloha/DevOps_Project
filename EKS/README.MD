@@ -16,7 +16,7 @@ sudo apt-get upgrade -y
 uname -i
 ```
 
-##1 zip install:
+## 1. zip install:
 ```bash
 sudo apt-get install zip -y
 ```
