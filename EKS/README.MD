@@ -43,7 +43,8 @@ sudo ./aws/install
 # Login via IAM role (Provide admin write if you are a beginar)
 aws configure
 ```
-> You'll be prompted to enter the following:
+> 
+# You'll be prompted to enter the following:
 AWS Access Key ID [None]: Required
 AWS Secret Access Key [None]: Required
 Default region name [None]: Enter
