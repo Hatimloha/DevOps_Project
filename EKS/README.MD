@@ -98,9 +98,13 @@ kubectl get svc
 # Change require: cluster-name
 eksctl delete cluster --name my-cluster --region <your-region>
 ```
-- 
-```bash
 
+## 5. Apply the manifest:
+- nginx-deployment.yaml
+- nginx-service.yaml
+```bash
+kubectl apply -f nginx-deployment.yaml
+kubectl apply -f nginx-service.yaml
 ```
 - 
 ```bash
