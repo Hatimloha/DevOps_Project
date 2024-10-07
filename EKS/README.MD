@@ -3,5 +3,5 @@
 - kubectl
 - eksctl
 
-## awscli installtionL:
+## awscli installtion:
 
