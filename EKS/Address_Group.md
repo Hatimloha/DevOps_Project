@@ -1,4 +1,7 @@
 # Address
+- We have to copy and paste in every new firewall
+
+> We have to copy and paste in every new firewall
 ```bash
 config firewall address
     edit "all"
