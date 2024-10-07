@@ -15,40 +15,40 @@ This repository contains configurations and scripts to deploy an Nginx server on
 2. Install dependencies.
 3. Configure AWS CLI.
 
-## Update and Upgrade the linux:
+## Updating and Upgrading the System
 ```bash
 sudo apt-get update 
 sudo apt-get upgrade -y
 ```
 
-## First check the type:
+## Check the System Type
 ```bash
 uname -i
 ```
 
-## 1. zip install:
+## 1. Install Zip:
 ```bash
 sudo apt-get install zip -y
 ```
 
-## 2. awscli installtion:
+## 2. Install AWS CLI:
 ```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-## Login AWS via CLI
+## Configure AWS CLI:
 ```bash
 # Login via IAM role (Provide admin write if you are a beginar)
 aws configure
 ```
-```bash
+> You'll be prompted to enter the following:
 AWS Access Key ID [None]: Required
 AWS Secret Access Key [None]: Required
 Default region name [None]: Enter
 Default output format [None]: Enter
-```
+
 
 ## 3. kubectl install:
 - Download the latest release with the command available on official docs: (https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
