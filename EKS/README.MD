@@ -28,7 +28,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-## 
+## Login AWS via CLI
 ```bash
 # Login via IAM role (Provide admin write if you are a beginar)
 aws configure
@@ -39,3 +39,5 @@ AWS Secret Access Key [None]: Required
 Default region name [None]: Enter
 Default output format [None]: Enter
 ```
+
+
