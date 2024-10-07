@@ -40,4 +40,11 @@ Default region name [None]: Enter
 Default output format [None]: Enter
 ```
 
+## kubectl install:
+- got to site (https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) and download the latest one
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+```bash
 
+```
