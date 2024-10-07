@@ -1,4 +1,5 @@
 # To create EKS on AWS we require some application:
+## This cmd will work in ubuntu
 - zip
 - awscli
 - kubectl
