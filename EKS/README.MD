@@ -72,3 +72,34 @@ mv ./kubectl ~/.local/bin/kubectl
 ```bash
 kubectl version --client
 ```
+
+## Install eksctl
+```bash
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+```
+- Verify the installation:
+```bash
+eksctl version
+```
+- 
+```bash
+
+```
+
+- 
+```bash
+
+```
+- 
+```bash
+
+```
+- 
+```bash
+
+```
+- 
+```bash
+
+```
