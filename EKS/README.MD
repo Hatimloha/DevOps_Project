@@ -82,7 +82,7 @@ sudo mv /tmp/eksctl /usr/local/bin
 ```bash
 eksctl version
 ```
-- Create an EKS Cluster
+- Create an EKS Cluster (it will take 15-30 minute)
 ```bash
 # Change require: <your-region>
 # Change require: cluster-name
