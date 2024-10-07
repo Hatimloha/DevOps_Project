@@ -28,3 +28,14 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
+## 
+```bash
+# Login via IAM role (Provide admin write if you are a beginar)
+aws configure
+```
+```bash
+AWS Access Key ID [None]: Required
+AWS Secret Access Key [None]: Required
+Default region name [None]: Enter
+Default output format [None]: Enter
+```
