@@ -50,8 +50,8 @@ aws configure
 - Default output format [None]: Enter
 
 
-## 3. kubectl install:
-- Download the latest release with the command available on official docs: (https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+## 3. Install kubectl: 
+- Download the latest release (refer to the official documentation: Install kubectl on Linux):
 ```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
@@ -83,15 +83,18 @@ mv ./kubectl ~/.local/bin/kubectl
 kubectl version --client
 ```
 
-## 4. Install eksctl
+## 4. Install eksctl:
+To install eksctl, run:
 ```bash
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 ```
+
 - Verify the installation:
 ```bash
 eksctl version
 ```
+
 - Create an EKS Cluster (it will take 15-30 minute)
 ```bash
 # Change require: <your-region>
@@ -102,21 +105,27 @@ eksctl create cluster --name my-cluster --region <your-region> --node-type t2.mi
 ```bash
 kubectl get svc
 ```
-- Clean Up (Optional)
-```bash
-# Change require: <your-region>
-# Change require: cluster-name
-eksctl delete cluster --name my-cluster --region <your-region>
-```
 
 ## 5. Apply the manifest:
 - nginx-deployment.yaml
 - nginx-service.yaml
+
+Deploy your Nginx server using the following commands:
 ```bash
 kubectl apply -f nginx-deployment.yaml
 kubectl apply -f nginx-service.yaml
 ```
-- 
-```bash
 
+# Check the external IP using below cmd:
+```bash
+kubectl get svc
+```
+
+
+
+- To delete the cluster (EKS), replace <your-region> and <cluster-name> with your values:
+```bash
+# Change require: <your-region>
+# Change require: cluster-name
+eksctl delete cluster --name my-cluster --region <your-region>
 ```
