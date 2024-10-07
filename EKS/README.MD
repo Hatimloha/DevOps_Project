@@ -40,14 +40,14 @@ sudo ./aws/install
 
 ## Configure AWS CLI:
 ```bash
-# Login via IAM role (Provide admin write if you are a beginar)
+# Log in via IAM role (provide admin write access if you're a beginner)
 aws configure
 ```
 > You'll be prompted to enter the following:
-  AWS Access Key ID [None]: Required
-  AWS Secret Access Key [None]: Required
-  Default region name [None]: Enter
-  Default output format [None]: Enter
+- AWS Access Key ID [None]: Required
+- AWS Secret Access Key [None]: Required
+- Default region name [None]: Enter
+- Default output format [None]: Enter
 
 
 ## 3. kubectl install:
