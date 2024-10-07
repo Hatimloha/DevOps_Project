@@ -3,6 +3,5 @@
 - kubectl
 - eksctl
 
+## awscli installtionL:
 
-
-# AWS CLI 
