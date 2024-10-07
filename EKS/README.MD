@@ -1,9 +1,19 @@
-# To create EKS on AWS we require some application:
-## This cmd will work in ubuntu
+# Nginx Server on AWS EKS
+## Description
+This repository contains configurations and scripts to deploy an Nginx server on AWS Elastic Kubernetes Service (EKS).
+
+## Prerequisites
+- AWS Account
+- ec2 (t2.micro)
 - zip
 - awscli
 - kubectl
 - eksctl
+
+## Setup Instructions
+1. Clone this repository.
+2. Install dependencies.
+3. Configure AWS CLI.
 
 ## Update and Upgrade the linux:
 ```bash
