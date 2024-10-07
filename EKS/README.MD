@@ -85,6 +85,7 @@ eksctl version
 - Create an EKS Cluster
 ```bash
 # Change require: <your-region>
+# Change require: cluster-name
 eksctl create cluster --name my-cluster --region <your-region> --node-type t2.micro --nodes 2
 ```
 - Configure kubectl to Use the New Cluster
@@ -94,6 +95,7 @@ kubectl get svc
 - Clean Up (Optional)
 ```bash
 # Change require: <your-region>
+# Change require: cluster-name
 eksctl delete cluster --name my-cluster --region <your-region>
 ```
 - 
