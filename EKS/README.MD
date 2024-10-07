@@ -21,7 +21,7 @@ uname -i
 sudo apt-get install zip -y
 ```
 
-##2 awscli installtion:
+## 2. awscli installtion:
 ```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
@@ -40,7 +40,7 @@ Default region name [None]: Enter
 Default output format [None]: Enter
 ```
 
-##3. kubectl install:
+## 3. kubectl install:
 - Download the latest release with the command available on official docs: (https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 ```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -73,7 +73,7 @@ mv ./kubectl ~/.local/bin/kubectl
 kubectl version --client
 ```
 
-##4. Install eksctl
+## 4. Install eksctl
 ```bash
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
