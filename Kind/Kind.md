@@ -1,6 +1,11 @@
 # Installing Kubernetes using kind on Ubuntu
 
 ## Prerequisites
+- Docker
+- kubectl
+- kind
+- helm
+- Custom manifest
 
 1. **Docker**: Ensure Docker is installed and running. If you don’t have Docker, install it with the following commands:
 
