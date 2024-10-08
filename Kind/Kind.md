@@ -47,14 +47,7 @@ kind create cluster
 ```
 `This command will set up a cluster with the default configuration.`
 
-
-## 2. Check the Cluster Status:
-Verify that your cluster is running:
-```bash
-
-```
-
-## 1. Create a Cluster:
+## 2. Create a Cluster:
 To create a new Kubernetes cluster with kind, run:
 ```bash
 kubectl cluster-info --context kind-kind
