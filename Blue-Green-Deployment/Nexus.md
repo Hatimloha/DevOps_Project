@@ -36,6 +36,44 @@ docker run -d -p 8081:8081 sonatype/nexus3
 docker ps
 ``` 
 
+## 3. Find nexus password
+```bash
+docekr exec -it <container-id> /bin/bash
+```
+- Follow the below steps:
+```bash
+ls
+cd sonatype-work/
+cd nexus3/
+car admin.password
+```
+copy the password and paste in nexus server 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
