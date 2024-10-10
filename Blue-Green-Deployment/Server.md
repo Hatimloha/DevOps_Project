@@ -3,6 +3,10 @@
 ### Prerequisite
 - Name: Server
 - EC2: t2.micro
+- install zip
+- install awscli
+- install terraform
+- 
 
 ## Update the server 
 ```bash
@@ -84,6 +88,64 @@ sudo apt-get install terraform
 - Verify the installation
 ```bash
 terraform -help
+```
+## 4. Clone the repo
+```bash
+git clone https://github.com/jaiswaladi246/Blue-Green-Deployment.git
+```
+- Go inside the git clone folder
+```bash
+cd Blue-Green-Deployment
+```
+
+- Go inside the Cluster folder
+```bash
+cd Cluster
+```
+## 5. Terraform
+Initialize the Terraform
+```bash
+terraform init
+```
+- terraform init
+```bash
+terraform plan
+```
+## 
+```bash
+
+```
+## 
+```bash
+
+```
+## 
+```bash
+
+```
+## 
+```bash
+
+```
+## 
+```bash
+
+```
+## 
+```bash
+
+```
+## 
+```bash
+
+```
+## 
+```bash
+
+```
+## 
+```bash
+
 ```
 ## 
 ```bash
