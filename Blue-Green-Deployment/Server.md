@@ -112,8 +112,9 @@ terraform init
 terraform plan
 ```
 - Before `terraform apply` check the region and zone in variables.tf file inside the Cluster folder
+It will take 15-20 minute to build infrastructure
 ```bash
-
+terraform apply --auto-approve
 ```
 ## 
 ```bash
