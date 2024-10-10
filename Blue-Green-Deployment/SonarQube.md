@@ -20,3 +20,18 @@ sudo uname -i
 ```bash
 sudo apt-get install docker.io -y
 ```
+
+- Give full permission to user
+```bash
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
+
+## 2. Create a nexus container
+```bash
+docker run -d -p 9000:9000 sonarqube:lts-community
+```
+- check container status:
+```bash
+docker ps
+``` 
