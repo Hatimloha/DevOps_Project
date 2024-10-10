@@ -107,11 +107,11 @@ Initialize the Terraform
 ```bash
 terraform init
 ```
-- terraform init
+- terraform plan is used to create an execution plan, showing what actions Terraform will take to reach the desired state defined in the configuration files.
 ```bash
 terraform plan
 ```
-## 
+- Before `terraform apply` check the region and zone in variables.tf file inside the Cluster folder
 ```bash
 
 ```
