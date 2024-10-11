@@ -276,7 +276,7 @@ kubectl describe secret mysecretname -n webapps
 - Credential -> system -> Global credential
 - craete a new token `name: k8-token`
 
-## install some plugins in jenkins server
+## 8. install some plugins in jenkins server
 http://_________:8080
 - plugin names:
 `sonarqube scanner`
@@ -291,4 +291,12 @@ http://_________:8080
 `kubernetes credentials`
 - Click on installl
 
+## 9. Create a Pipeline
+- I have craete a script with the name `Jenkins-Groovy`
+`Steps`
+- Dashboard
+- craete a pipeline
+- Name of pipeline `Blue-Green-Deployment`
+- click on pipeline
+- Watch video 40:00 minute (https://www.youtube.com/watch?v=tstBG7RC9as&list=PLAdTNzDIZj_9c-o43WJ7yYBa5YEAkWiOv&index=1)
 
