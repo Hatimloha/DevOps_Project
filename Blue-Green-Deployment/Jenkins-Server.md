@@ -34,5 +34,10 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
 sudo apt-get update
 sudo apt-get install jenkins
 ```
+- Enable jenkins service:
+When ever server restartt jenkins service will be auto start
+```bash
+sudo systemctl enable jenkins
+```
 
 ##
