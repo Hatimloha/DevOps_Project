@@ -116,40 +116,164 @@ It will take 15-20 minute to build infrastructure
 ```bash
 terraform apply --auto-approve
 ```
-## 
+## 6. Install kubectl: 
+- Download the latest release (refer to the official documentation: Install kubectl on Linux):
 ```bash
-
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
-## 
+- Validate the binary (optional)
 ```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
 
+# Validate the kubectl binary against the checksum file:
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+
+# If valid, the output is: 
+## kubectl: OK
 ```
-## 
+- Install kubectl
 ```bash
-
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
-## 
+
+- If you do not have root access on the target system, you can still install kubectl to the ~/.local/bin directory:
 ```bash
-
+chmod +x kubectl
+mkdir -p ~/.local/bin
+mv ./kubectl ~/.local/bin/kubectl
+# and then append (or prepend) ~/.local/bin to $PATH
 ```
-## 
+
+- Test to ensure the version you installed is up-to-date
 ```bash
-
+kubectl version --client
 ```
-## 
+
+- Connect to the cluster
 ```bash
-
+aws eks --region ap-south-1 update-kubeconfig --name devopsshack-cluster
 ```
-## 
+- check the nodes and pods
 ```bash
-
+kubectl get nodes
+kubectl get pods]
 ```
-## 
+
+## rbac
+Creating Service Account
 ```bash
-
+vi sa.yml
 ```
-## 
+copy and paste in file
 ```bash
-
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jenkins
+  namespace: webapps
 ```
+- Now create a namespace to work the cmd
+```bash
+kubectl create ns webapp
+kubectl apply -f sa.yml
+```
+
+- Create role for assigning jenkins user
+```bash
+vi role.yml
+```
+Copy and paste 
+```bash
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: app-role
+  namespace: webapps
+rules:
+  - apiGroups:
+        - ""
+        - apps
+        - autoscaling
+        - batch
+        - extensions
+        - policy
+        - rbac.authorization.k8s.io
+    resources:
+      - pods
+      - secrets
+      - componentstatuses
+      - configmaps
+      - daemonsets
+      - deployments
+      - events
+      - endpoints
+      - horizontalpodautoscalers
+      - ingress
+      - jobs
+      - limitranges
+      - namespaces
+      - nodes
+      - pods
+      - persistentvolumes
+      - persistentvolumeclaims
+      - resourcequotas
+      - replicasets
+      - replicationcontrollers
+      - serviceaccounts
+      - services
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+```
+```bash
+kubectl apply -f role.yml
+```
+- Bind the role to service account
+```bash
+vi rolebind.yml
+```
+```bash
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: app-rolebinding
+  namespace: webapps 
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: app-role 
+subjects:
+- namespace: webapps 
+  kind: ServiceAccount
+  name: jenkins
+```
+```bash
+kubectl apply -f rolebind.yml
+```
+### Generate token using service account in the namespace
+```bash
+vi sec.yml
+```
+```bash
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/service-account-token
+metadata:
+  name: mysecretname
+  annotations:
+    kubernetes.io/service-account.name: jenkins
+```
+```bash
+kubectl apply -f sec.yml -n webapps
+```
+- check the secret is generate or not
+```bash
+kubectl describe secret mysecretname -n webapps
+```
+`Steps`
+- copy token
+- open jenkins server
+- login
+- Manage jenkins
+- Credential
+- global
+
 
