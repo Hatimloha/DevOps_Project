@@ -39,5 +39,9 @@ When ever server restartt jenkins service will be auto start
 ```bash
 sudo systemctl enable jenkins
 ```
-
-##
+- login to the jenkins server
+Copy public ip and paste in browser with port 8080
+```bash
+sudo cat /var/jenkins_home/secrets/initialAdminPassword
+```
+- click Install suggested plugin 
