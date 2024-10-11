@@ -81,3 +81,38 @@ echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main |
 sudo apt-get update
 sudo apt-get install trivy
 ```
+
+## 5. Install kubectl
+- Download the latest release (refer to the official documentation: Install kubectl on Linux):
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+- Validate the binary (optional)
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+# Validate the kubectl binary against the checksum file:
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+
+# If valid, the output is: 
+## kubectl: OK
+```
+- Install kubectl
+```bash
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+
+### If you do not have root access on the target system, you can still install kubectl to the ~/.local/bin directory:
+```bash
+chmod +x kubectl
+mkdir -p ~/.local/bin
+mv ./kubectl ~/.local/bin/kubectl
+# and then append (or prepend) ~/.local/bin to $PATH
+```
+
+### Test to ensure the version you installed is up-to-date
+```bash
+kubectl version --client
+```
+
+
