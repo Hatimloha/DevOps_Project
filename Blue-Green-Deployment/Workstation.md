@@ -159,7 +159,7 @@ kubectl get nodes
 kubectl get pods]
 ```
 
-## rbac
+## 7. rbac
 Creating Service Account
 ```bash
 vi sa.yml
