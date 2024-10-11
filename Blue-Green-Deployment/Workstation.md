@@ -269,11 +269,12 @@ kubectl apply -f sec.yml -n webapps
 kubectl describe secret mysecretname -n webapps
 ```
 `Steps`
-- copy token
+- copy token from output `kubectl describe secret mysecretname -n webapps`
 - open jenkins server
 - login
 - Manage jenkins
-- Credential
-- global
+- Credential -> system -> Global credential
+- craete a new token `name: k8-token`
+
 
 
