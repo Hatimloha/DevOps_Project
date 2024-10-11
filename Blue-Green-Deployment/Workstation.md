@@ -292,7 +292,7 @@ http://_________:8080
 - Click on installl
 
 ## 9. Create a Pipeline
-- I have craete a script with the name `Jenkins-Groovy`
+- I have craete a script with the name `Jenkins-Groovy`.
 `Steps`
 - Dashboard
 - craete a pipeline
