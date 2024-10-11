@@ -276,5 +276,19 @@ kubectl describe secret mysecretname -n webapps
 - Credential -> system -> Global credential
 - craete a new token `name: k8-token`
 
+## install some plugins in jenkins server
+http://_________:8080
+- plugin names:
+`sonarqube scanner`
+`config file provider`
+`maven intergration`
+`Pipeline maven integrations`
+`Pipeline stage view`
+`docker Pipeline`
+`kubernetes`
+`kubernetes cli`
+`kubernetes client api`
+`kubernetes credentials`
+- Click on installl
 
 
