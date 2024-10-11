@@ -41,13 +41,20 @@ docker ps
 docekr exec -it <container-id> /bin/bash
 ```
 - Follow the below steps:
+User: admin
+copy the password and paste in nexus server `caopy till bash part only`
 ```bash
 ls
 cd sonatype-work/
 cd nexus3/
 car admin.password
 ```
-copy the password and paste in nexus server 
+
+
+
+
+
+
 
 
 
