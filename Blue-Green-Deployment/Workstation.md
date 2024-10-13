@@ -17,7 +17,7 @@ apt-get upgrade -y
 
 ## Change the host name
 ```
-vi etc/host
+vi etc/hostname
 # remove everthing from the host file and type "Server"
 ```
 
