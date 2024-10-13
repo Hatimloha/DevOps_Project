@@ -19,7 +19,7 @@ sudo uname -i
 
 ## 1. Java
 ```bash
-sudo apt install openjdk-17-jre-headlesss
+sudo apt install openjdk-17-jre-headless -y
 ```
 
 ## 2. Jenkins
