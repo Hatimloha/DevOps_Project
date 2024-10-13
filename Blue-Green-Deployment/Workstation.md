@@ -6,7 +6,9 @@
 - install zip
 - install awscli
 - install terraform
-- 
+
+## Create a key pair
+-  Name: DevOps-Shack
 
 ## Update the server 
 ```bash
