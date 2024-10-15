@@ -1,6 +1,6 @@
 ## Prerequisites
 - AWS Account
-- ec2 (t2.micro)
+- ec2 (t2.medium)
 - java (jdk17)
 - 
 
