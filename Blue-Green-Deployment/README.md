@@ -24,7 +24,7 @@ Blue-Green Deployment is a strategy for application deployment that aims to mini
 
 ## Project on GitHub
 
-I have created a project demonstrating Blue-Green Deployment principles. You can find it on GitHub [here](https://github.com/yourusername/your-repo-name). This project includes:
+I have created a project demonstrating Blue-Green Deployment principles. You can find it on GitHub [here]([https://github.com/yourusername/your-repo-name](https://github.com/Hatimloha/DevOps_Project/tree/main/Blue-Green-Deployment)). This project includes:
 
 - A sample application setup
 - Scripts for deploying to Blue and Green environments
