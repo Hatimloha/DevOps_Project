@@ -2,7 +2,7 @@
 
 ### Prerequisite
 - Name: Server
-- EC2: t2.micro
+- EC2: t2.medium
 - install zip
 - install awscli
 - install terraform
