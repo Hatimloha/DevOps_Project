@@ -1,6 +1,6 @@
 ## Prerequisites
 - AWS Account
-- ec2 (t2.medium)
+- ec2 (t2.micro)
 - docker
 
 
